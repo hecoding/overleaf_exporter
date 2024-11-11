@@ -1,0 +1,9 @@
+[Unit]
+Description=Overleaf exporter
+After=network.target
+
+[Service]
+ExecStart=<env_path>/python /<path>/overleaf_exporter/overleaf_exporter.py --logs-path <logs_path> --savestate-file <state_path>
+
+[Install]
+WantedBy=default.target
